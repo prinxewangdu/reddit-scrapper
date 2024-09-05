@@ -62,8 +62,8 @@ async def main():
                                  client_secret='1tmcSGPRaZ-2rIyfsAbPqlPlxc0e6g',
                                  user_agent='MyRedditScraper/0.1 by Prinxe') as reddit:
 
-        # Set up the bot using ApplicationBuilder
-        application = ApplicationBuilder().token("7539099624:AAHUUyDoLN7_ejyiBhFI9Rw07vHhJE5aI-o").build()
+        # Set up the bot using ApplicationBuilder7539099624:AAHUUyDoLN7_ejyiBhFI9Rw07vHhJE5aI-o
+        application = ApplicationBuilder().token(os.getenv('7539099624:AAHUUyDoLN7_ejyiBhFI9Rw07vHhJE5aI-o')).build()
 
         # Command handlers
         application.add_handler(CommandHandler("start", start))
