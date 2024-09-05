@@ -72,7 +72,7 @@ async def main():
         application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, lambda update, context: handle_message(update, context, reddit)))
 
         # Start polling
-        await application.run_polling()
+        await application.run_polling(port=int(os.getenv('PORT', '8443')))  # Ensure to listen on the port specified by Render
 
 if __name__ == "__main__":
     nest_asyncio.apply()  # Apply nest_asyncio to allow running in an existing event loop
